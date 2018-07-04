@@ -1,0 +1,28 @@
+#formFields_10 {
+    width: 50%;
+}
+#formFields_3 {
+    width: 50%;
+}
+.col-xs {
+    text-align: center;
+}
+h6 {
+    margin-left: 10px !important;
+}
+.headerOne {
+
+    color: white;
+    background-color: #007cbb;
+    font-weight: bold;
+    margin: 0 auto;
+    vertical-align: middle;
+
+}
+.sen {
+
+    color: white;
+    font-weight: bold;
+    margin-top: 12px;
+
+}

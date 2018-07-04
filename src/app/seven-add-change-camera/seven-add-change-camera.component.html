@@ -1,0 +1,208 @@
+
+  <div class="headerOne">
+        <div class="row">
+                <div class="col-xs">
+                    <p class="sen">
+                  Sentry
+                </p>
+                </div>
+                <div class="col-xs">
+                        <p class="sen">
+                    Customer/Subscription ID {{save.token}}
+                    </p>
+                  </div>
+                  <div class="col-xs">
+                      <button class="btn btn-primary" routerLink="/dash" style="font-weight: bold !important;">Save and Exit</button>
+                    </div>
+              </div>
+</div>
+
+<div class="main-container">
+     
+
+      
+ <div class="content-container">
+            
+    
+    
+    
+
+
+
+
+
+
+<div class="row">
+    
+    <div class="col-sm-12 col-md-6">
+
+
+
+  
+            <p *ngIf="showError" class="selLocation">Select camera preference</p>
+            <p *ngIf="showSuccess" class="selSuccess">{{draggedCar.name}} added for view.</p>
+  <table class="table">
+      <thead>
+          <tr>
+
+              <th >Cam</th>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Sentry's Camera ID</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+                
+           
+            <td>
+                <span  *ngIf="draggedCar != null">
+                {{draggedCar.camera}}
+            </span>
+            <div class="type">
+               <!-- <div id="div2" 
+                        (drop)="drop($event)" 
+                        (dragover)="allowDrop($event)"> </div> -->
+                        <!-- <div droppable>
+                                <p>Drop items here</p>
+                              </div>    -->
+
+                       <div id="div2" pDroppable="cars" (onDrop)="drop($event)">
+                      
+                      </div>
+
+                    </div>  
+                
+            </td>
+
+            <td> 
+                
+                  <span *ngIf="draggedCar != null">  {{draggedCar.name}}</span>
+         
+            </td>
+
+            <td class="radioTd">
+
+                  <div class="radio" >
+                      <input type="radio"  [(ngModel)]="myRadio" name="gridRadios1" id="checkrads_10" value="indoor">
+                      <label for="checkrads_10">Indoor</label>
+                  </div>
+                  <div class="radio" >
+                      <input type="radio"  [(ngModel)]="myRadio" name="gridRadios2" id="checkrads_11" value="outdoor">
+                      <label for="checkrads_11">Outdoor</label>
+                  </div>
+            </td>
+              
+            <td>
+       
+                <div class="col-xs">
+                       
+                        <input type="tel"  [(ngModel)]="Camid"  id="formFields_10" >
+                        <button (click)="add()" style="border: none; background-color: aliceblue;color: #007cbb;" class="btn btn-primary">
+                            Add</button>
+                      
+                </div>
+                      
+                      
+              
+            </td>
+        </tr>
+  
+  
+          <!-- ------------------------------------------------------- -->
+     
+  
+          <!-- ------------------------------------------------------------- -->
+      </tbody>
+    </table>
+
+
+   
+  </div>
+  <div class="col-sm-12 col-md-6">
+
+  
+  
+  <div class="flex">
+    <div class="row">
+      <div class="col-xs" style="margin :0 auto !important">
+        <p class="headCameraType">
+            Sentry supported camera  types
+        </p>
+      </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-xs" style="margin :0 auto !important">
+          <p class="subTitle">
+              (Drag these icons to identify what camera is at
+  each location)
+          </p>
+        </div>
+      </div>
+  
+      
+      <div class="row">
+
+            <!-- <div *ngFor="let cam of cameras"  id="div1" 
+            (drop)="drop(cam)" 
+            (dragover)="allowDrop($event)">
+      
+            <img 
+            src="{{cam.img}}" 
+            draggable="true" 
+            (dragstart)="drag($event)" 
+            id="drag1"
+            width="88" 
+            height="31">
+      </div> -->
+
+
+     
+      
+        
+            <div id="div1" *ngFor="let car of availableCars" class="ui-state-default ui-helper-clearfix" pDraggable="cars"
+                (onDragStart)="dragStart(car)" (onDragEnd)="dragEnd($event)">
+                <i class="fa fa-arrows fa-2x" style="float:right;margin-top:8px"></i>
+                <img id="drag1" src="{{car.img}}"  draggable="true">
+                <div >{{car.name}}</div>
+      
+        </div>
+
+       
+ 
+
+        </div>
+      
+  </div>
+
+
+  <h2 (onDragStart)="dragStart(cam)" (onDragEnd)="dragEnd($event)"  draggable="true" >Drag and Drop demo</h2>
+
+  
+  
+
+  
+
+
+</div>
+
+</div>
+  
+
+
+
+
+</div>
+</div>
+
+  <div class="foot" style="margin-top: 50px">
+    <p class="footP" style="font-weight: bold">
+        Configure your camera with the Camera ID
+        using Sentry Instructions for your camera type
+    </p>
+  
+    <img src="../../assets/samplelogo.jpeg" class="footerLogo">
+  
+  </div>

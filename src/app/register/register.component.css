@@ -1,0 +1,9 @@
+.main-login.main-center {
+    margin: 0 auto;
+        margin-top: 0px;
+    margin-top: 5%;
+    border: 2px;
+    border-inline-start-color: azure;
+    border: 1px solid darkgrey;
+    padding: 70px;
+}

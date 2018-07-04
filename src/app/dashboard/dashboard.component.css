@@ -1,0 +1,46 @@
+.logo {
+
+    float: right;
+    height: 50px;
+    margin-right: 10px;
+
+}
+.col-xs {
+    text-align: center;
+}
+.buttons
+{
+    width:100%;
+    text-align: center;
+}
+.btn
+{
+    display: inline-block;
+}
+.textAcro {
+    float: right;
+    font-size: small;
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+        margin-top: 0px;
+    margin-top: 12px;
+}
+
+.headerOne {
+
+    color: white;
+    background-color: #007cbb;
+    font-weight: bold;
+    margin: 0 auto;
+    vertical-align: middle;
+
+}
+.sen {
+
+    color: white;
+    font-weight: bold;
+    margin-top: 12px;
+
+}
+

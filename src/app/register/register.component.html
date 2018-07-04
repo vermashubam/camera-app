@@ -1,0 +1,103 @@
+
+<div class="content">
+
+  <div class="login">
+    
+  </div>
+  
+  
+
+                  <div class="container" style="margin-top: 40px"> 
+  
+                          <div class="row main">
+                    
+                              <div class="main-login main-center">
+                                  <form [formGroup]="formdata" (ngSubmit) = "callApi(formdata.value)"  class="form-horizontal">
+                                      
+                                      <div class="form-group">
+                                          <label for="name" class="cols-sm-2 control-label">Name</label>
+                                          <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                  <input formControlName="name" type="text" class="form-control" name="name" id="name"  />
+                                              </div>
+                                          </div>
+                                      </div>
+                  
+                                      <div class="form-group">
+                                          <label for="email" class="cols-sm-2 control-label">Email</label>
+                                          <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                  <input formControlName="email"  type="text" class="form-control" name="email" id="name"  />
+                                              </div>
+                                          </div>
+                                      </div>
+                  
+                                      <div class="form-group">
+                                          <label for="username" class="cols-sm-2 control-label">Password</label>
+                                          <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                  <input formControlName="password" type="text" class="form-control" name="username" id="name"  />
+                                              </div>
+                                          </div>
+                                      </div>
+                  
+                           
+                  
+                                      <div class="form-group">
+                                          <label for="password" class="cols-sm-2 control-label">Phone No</label>
+                                          <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                  <input formControlName="phone" type="number" class="form-control" name="password" id="name"  />
+                                              </div>
+                                          </div>
+                                      </div>
+                  
+                  
+                                
+                  
+                                      <div class="form-group ">
+
+                                          <button [disabled]="!formdata.valid" type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                                     
+                                        
+                                      </div>
+                                     
+                                  </form>
+
+                                
+                                  <button routerLink="/login" class="btn btn-primary btn-lg btn-block login-button">Login to your ACCOUNT</button>
+                                     
+                              </div>
+                          </div>
+                     
+                      </div>
+       
+  
+   
+
+     
+  </div>
+  
+  
+  <style>
+  
+  .cols-sm-2.control-label {
+  
+      color: #666666 !important;
+  
+  }
+  #name{
+      color: #666666 !important;
+      font-size: 14px !important;
+  }
+  
+  </style>   
+  
+  
+        
+  
+  

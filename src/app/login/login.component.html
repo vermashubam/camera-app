@@ -1,0 +1,33 @@
+
+
+
+
+<div class="login-wrapper">
+        <form class="login" [formGroup]="formdata" (ngSubmit) = "login(formdata.value)">
+            <label class="title">
+                <h3 class="welcome">Welcome to</h3>
+                Company Product Name
+                <h5 class="hint">Use your Company ID to sign in or create one now</h5>
+            </label>
+            <div class="login-group">
+              
+                <input formControlName="username" type="text" id="login_username" placeholder="Username">
+                <input formControlName="password" type="password" id="login_password" placeholder="Password">
+                <div class="checkbox">
+                    <input type="checkbox" id="rememberme">
+                    <label for="rememberme">
+                        Remember me
+                    </label>
+                </div>
+                <h6 *ngIf="loading" > Loading...</h6>
+                <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+               <!-- <div class="error active">
+                    Invalid user name or password
+                </div> -->
+                <button type="submit" class="btn btn-primary">LOGIN</button>
+                <a href="javascript://" class="signup" routerLink="/register">Sign up for a Company ID</a>
+            </div>
+        </form>
+    </div>
+    
+    
